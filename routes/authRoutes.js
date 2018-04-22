@@ -15,6 +15,6 @@ module.exports = app =>{
     })
     
     app.get('/api/current_user', (req,res)=>{
-        res.set({ 'content-type': 'application/json; charset=utf-8' }).send(req.user);
+        res.send(req.user);
     })
 }
