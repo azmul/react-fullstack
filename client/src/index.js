@@ -12,7 +12,7 @@ import registerServiceWorker from './registerServiceWorker';
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 // axios import
-require('./axios');
+//require('./axios');
 
 ReactDOM.render(
     <Provider store={store}>

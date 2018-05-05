@@ -5,16 +5,17 @@ import * as actions from '../actions';
 
 import Aux from './hoc/Aux';
 import Header from './common/Header';
+import Survey from './survey/Survey';
+import Landing from './landing/Landing';
+import SurveyNew from './survey/survey-new/Survey-new';
 
-const Dasboard = () => <h2>dasboard</h2>
-const SurveyLink = () => <h2>surveyLink</h2>
-const Landing = () => <h2>landing</h2>
 
 class App extends Component{
   constructor(props){
       super(props);
   }
   componentDidMount(){
+      console.log("App.js --->", this.props);
       this.props.fetchUser();
   }
   render(){
@@ -24,8 +25,8 @@ class App extends Component{
                <div className="container">
                    <Header />
                    <Route exact={true} path="/" component={Landing} />
-                   <Route exact={true} path="/surveys" component={Dasboard} />
-                   <Route path="/surveys/new" component={SurveyLink} />
+                   <Route exact={true} path="/surveys" component={Survey} />
+                   <Route path="/surveys/new" component={SurveyNew} />
                </div>
              </BrowserRouter>
          </Aux>
